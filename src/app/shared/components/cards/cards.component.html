@@ -1,0 +1,58 @@
+<p>cards works!</p>
+
+
+<body>
+<div class = card>
+    <div class="content"  >
+        <div fxLayout="row wrap" fxLayoutGap="30px grid"  fxFlexAlign="stretch">
+
+          <div fxFlex="25%" *ngFor="let food of FoodList ">
+           
+
+            <mat-card class="mat-elevation-z4"  *ngIf="(food.restaurant.toLowerCase().includes(searchRestaurant.toLowerCase())
+                        
+            )" >
+               
+
+              <mat-card-header>
+                <mat-card-title> {{food.restaurant}}</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src={{food.imageUrl}}>
+              <mat-card-content>
+                <h2>
+                  {{food.dishName}}
+                </h2>
+                <p>
+                    {{food.description}}
+                </p>
+    
+                <h3>
+                    {{food.cost | currency}}
+                </h3>
+    
+                <h3>
+                      {{food.rating}}
+                </h3>
+
+              
+    
+    
+    
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-flat-button color="accent"  (click)="openDialogConfirm(food)">Order</button>
+                <button mat-flat-button color="primary" class="primary"(click)="openDialogTrackOrder()">track Order</button>
+              </mat-card-actions>
+
+              
+              
+            </mat-card>
+          </div>
+        </div>
+        </div>
+    </div>
+
+    
+  </body>
+    
+ 

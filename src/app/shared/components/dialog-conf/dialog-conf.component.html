@@ -1,0 +1,37 @@
+<div class="container">
+      
+
+    
+    <img  class="restaurant"  src="{{data.imageUrl}}"  > 
+
+
+
+    <h2> {{data.restaurant }} </h2>
+
+    <h2> </h2>
+    
+    <mat-dialog-content>
+
+
+        <h2>{{data.dishName}} </h2>
+      
+
+            <h2>  {{data.description}}   </h2>
+
+            <h3> No of items ordered : {{count}}   </h3>
+      
+
+</mat-dialog-content>
+    
+    <mat-dialog-actions>
+    <button mat-stroked-button color="accent"  (click)="inCount()" > add Order to cart </button>
+
+      
+
+        <button mat-stroked-button color="warn"  (click)="closeDialog( )" >close</button>
+
+        <button type="button" class="btn btn-outline-danger"  (click)="resetCounter()">Reset</button>
+        
+    </mat-dialog-actions>
+    
+    

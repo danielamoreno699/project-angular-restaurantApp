@@ -1,0 +1,36 @@
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+.navbar {
+    justify-content: space-between;
+    position: absolute;
+
+
+}
+
+a{
+    color: white;
+    padding: 10px;
+    
+}
+
+a:hover{
+    color: rgb(170, 15, 93);
+    cursor: pointer ;
+ 
+}
+
+.mat-icon{
+    transition: transform .2s; 
+}
+
+mat-icon:hover{
+    transform: scale(1.5)
+}
+
+#logOut{
+    transition: transform .2s; 
+}
+
+#logOut:hover{
+    transform: scale(1.5)
+}

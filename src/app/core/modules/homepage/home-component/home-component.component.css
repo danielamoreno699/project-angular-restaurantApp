@@ -1,0 +1,49 @@
+
+
+
+.Boxcontainer{
+    margin: auto;
+    top: 70px;
+    border:   solid;
+    position: relative;
+    width: 400px;
+    height: 42px;
+    padding:  0px 50px;
+    border-radius: 60px;
+
+}
+
+
+.Boxcontainer  .search-box .elementsContainer{
+        width: 900px;
+        margin-left: 60px;
+        border: none;
+       
+    
+
+}
+
+.search{
+    border:none;
+    height: 100%;
+    width: 100%;
+    padding: 0px 5px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+a{
+    left: 30px;
+}
+
+.mat-icon{
+    font-size: 30px;
+}
+
+.content {
+    padding: 16px;
+}
+
+
+

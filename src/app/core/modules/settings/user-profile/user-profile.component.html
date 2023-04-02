@@ -1,0 +1,240 @@
+
+
+
+
+<mat-toolbar color= "black" class="navbar">
+
+    <a  routerLink="/home-component" routerLinkActive="active" id=" home">AppRestaurant</a>
+    
+    <div >
+        <a routerLink="/confirm-order"  routerLinkActive="active"><mat-icon> local_grocery_store</mat-icon> </a>
+        <a routerLink="/place-order"    routerLinkActive="active"><mat-icon> local_shipping</mat-icon></a>
+        <a routerLink="/user-profile"   routerLinkActive="active"><mat-icon> person_pin</mat-icon></a>
+        <a routerLink="/login-user"    routerLinkActive="active" id = "logOut"  >logOut</a>  
+      </div>
+
+</mat-toolbar>
+
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <img  class = "avatar mat-elevation-z8"  src="https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg">
+         <h4 class=" name ">user name</h4>
+        <div class=" icons">
+    
+            <button mat-button class="menu-button">
+                <mat-icon>person</mat-icon>
+                <span> profile details</span>
+            </button>
+            <mat-divider></mat-divider>
+
+                <button mat-button class="menu-button">
+                    <mat-icon>payment</mat-icon>
+                    <span> payment details</span>
+
+
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-button class="menu-button">
+                    <mat-icon>room</mat-icon>
+                    <span> address</span>
+
+
+                </button>
+
+                
+                    <mat-divider></mat-divider>
+                
+                    <button mat-button class="menu-button">
+                        <mat-icon>home</mat-icon>
+                        <span> home</span>
+    
+    
+                    </button>
+
+
+                    <mat-divider></mat-divider>
+                
+            </div>
+    </mat-drawer>
+
+
+         
+
+
+
+            <mat-drawer-content>
+
+        <div class = "user-information">
+            <h2>User information</h2>
+         <a>  <mat-icon class="pencil"  (click) = "enabling()"> border_color</mat-icon> </a> 
+         
+         
+         <mat-icon (click)="navigateToViewProfile(view)" > account_circle</mat-icon>  
+
+               <!--<mat-icon (click)="navigateToViewProfile()" > account_circle</mat-icon>-->
+            </div>
+
+
+<mat-tab-group  >
+    <mat-tab label="Update information of user " >
+
+
+        <form  class=" container" [formGroup]="myForm" (ngSubmit)="onSubmit1()" >
+            
+          <!--- <div ngModelGroup = "names"  >  --->
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="fname"  class = "fname">name</label>
+                <input formControlName="fname" class="form-control" id="fname"  placeholder="Enter name"  name="fname">
+                
+            </div>
+            </div> 
+
+            <div class="form-group">
+                <div class="mb-3">
+                <label for="last-name">last name</label>
+                <input formControlName="lname" class="form-control" id="lname"  placeholder="Enter last name">
+              </div>
+            </div>
+                
+
+            <div class="form-group">
+                <div class="mb-3">
+              <label for="exampleInputEmail1">Email address</label>
+              <input formControlName="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email">
+            </div>
+            </div>
+           
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+    </mat-tab>
+    <mat-tab label="Address">
+        
+       <!--- <form class=" container"  [formGroup]="myForm" (ngSubmit)="onSubmit2()" >
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="houseNo"  class = "house">House No</label>
+                <input formGroupName="addressGroup" class="form-control" id="houseNo" placeholder="Enter house No">
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="City"  class = "city">City</label>
+                <input  formGroupName="addressGroup" class="form-control" id="city"  placeholder="Enter city">
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="state"  class = "state">state</label>
+                <input formGroupName="addressGroup" class="form-control" id="state"  placeholder="Enter state">
+            </div>
+            </div>
+            <div class="form-group"> 
+                <label for="landmark"  class = "landmark">landmark</label>
+                <input formGroupName="addressGroup" class="form-control" id="landmark"  placeholder="Enter landmark"  >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>-->
+    </mat-tab>
+
+
+
+  
+
+
+  </mat-tab-group>          
+
+
+
+   <!---this is the ng template-->
+            
+   <ng-template #view>
+    <mat-drawer-content>
+
+        <div class = "user-information">
+            <h2>User information</h2>
+         <a>  <mat-icon class="pencil"> border_color</mat-icon> </a> 
+    </div>
+<mat-tab-group animationDuration="0ms" >
+    <mat-tab label="Update information of user " >
+        <form class=" container">
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="name"  class = "name">name</label>
+               <p> something </p>
+              </div>
+            </div> 
+            <div class="form-group">
+                <div class="mb-3">
+                <label for="last-name">last name</label>
+                <p> something </p>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="mb-3">
+              <label for="exampleInputEmail1">Email address</label>
+              <p> something </p>
+            </div>
+            </div>
+            
+            
+          </form>
+    </mat-tab>
+    <mat-tab label="Address">
+        <form class=" container">
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="House"  class = "house">House No</label>
+                <p> something </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="City"  class = "city">City</label>
+                <p> something </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="state"  class = "state">state</label>
+                <p> something </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <label for="landmark"  class = "landmark">landmark</label>
+                <p> something </p>
+            </div>
+            
+        </form>
+    </mat-tab>
+
+    <mat-tab label="payment information">
+
+    </mat-tab>
+
+
+  </mat-tab-group>    
+
+</mat-drawer-content>
+
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

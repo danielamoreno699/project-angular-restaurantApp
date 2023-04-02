@@ -1,0 +1,37 @@
+
+<mat-card class=" card">
+   
+
+    <mat-card-title>review order</mat-card-title>
+
+    <mat-divider inset></mat-divider>
+    <mat-card-content>
+       
+                <h3>Subtotal</h3>
+                <p>{{sumTotalwithoutTax()}}</p>
+
+       
+
+        <mat-divider inset></mat-divider>
+        
+            <h4>tax</h4>
+            <p>{{this.randomNumber}}</p>
+
+    
+    <mat-divider inset></mat-divider>
+    
+    
+        <h3>order total</h3>
+        <p> {{this.total}}</p>
+
+
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+        <button type="button" class="btn btn-light"  (click)="GoToPayment()">confirm order</button>
+
+    </mat-card-actions>
+    <mat-card-footer>
+      
+    </mat-card-footer>
+  </mat-card>

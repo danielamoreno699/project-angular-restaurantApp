@@ -1,0 +1,86 @@
+<mat-toolbar color= "black" class="navbar">
+    
+    <a  routerLink="/home-component" id=" home">AppRestaurant</a>
+    
+      <div >
+
+                <a routerLink="/confirm-order"  routerLinkActive="active"><mat-icon> local_grocery_store</mat-icon> </a>
+                <a routerLink="/place-order"    routerLinkActive="active"><mat-icon> local_shipping</mat-icon></a>
+                <a routerLink="/user-profile"   routerLinkActive="active"><mat-icon> person_pin</mat-icon></a>
+                <a routerLink="/login-user"    routerLinkActive="active" id = "logOut"  >logOut</a>
+        </div>
+      
+
+  </mat-toolbar>
+
+
+<div class=" search-id">
+    <div class="form-outline mb-4">
+        <input type="search" class="form-control" id="datatable-search-input">
+        <button type="button" class="btn btn-success">Success</button>
+      </div>
+    
+      </div>
+
+
+<body>
+
+
+
+    <div class = "container">
+        <h1>your order detail</h1>
+        <div class= "box" >
+            <div class="order" style="display:flex">
+            <button type="button" class="btn btn-primary" (click)=" openDialogTrackOrder()">{{this.feedId}}</button>
+            <h4>order tracking </h4>
+            </div>
+        <hr/>
+
+        <div class="order" style="display:flex">
+            <button type="button" class="btn btn-primary">####</button>
+            <h4>order tracking </h4>
+            </div>
+
+      
+
+            <div class="order-1" style="display:flex ">
+                <button type="button" class="btn btn-primary">#####</button>
+                <h4>order tracking </h4>
+                </div>
+
+                <div class="order-2" style="display:flex ">
+                   
+                    <h3>order tracking </h3>
+                    </div>
+                <hr>
+
+                <div class="container-2">
+                    <span >
+                      <span class="circle-desc" ></span> 
+                      <span class="circles" ></span>
+                      <span class="bar" ></span>
+                    </span>
+                    </div>
+                   
+         
+     
+      
+
+    </div>
+        <h3 style="color:blue">something </h3>
+
+               
+           
+    </div>
+
+    <div>
+        <img src="https://miro.medium.com/max/1000/1*eBEpHbUKkMBa-9_n05H2Hg.png">
+    </div>
+
+   
+
+   
+
+</body>
+
+<app-footer></app-footer>

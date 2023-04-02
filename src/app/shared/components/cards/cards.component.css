@@ -1,0 +1,44 @@
+
+
+.card {
+    width: 70%;
+    top: 110px;
+    left: 260px;
+}
+
+.mat-card{
+    background-color: rgb(248, 244, 244);
+    color: black;
+    text-align: center;
+}
+
+
+
+.mat-card-actions  .primary
+{
+    left: 20px;
+    transition: transform .2s; 
+}
+
+
+.mat-card-actions  .primary:hover{
+    
+ transform: scale(1.2)
+
+}
+
+.mat-card-actions  .accent{
+    transition: transform .2s; 
+
+}
+
+.mat-card-actions  .accent:hover{
+    transform: scale(1.2)
+
+}
+
+img{
+    height: 157px;
+}
+
+

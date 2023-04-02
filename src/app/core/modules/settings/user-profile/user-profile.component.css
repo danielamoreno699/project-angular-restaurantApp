@@ -1,0 +1,149 @@
+
+
+.navbar {
+    justify-content: space-between;}
+
+mat-icon{
+    transition:transform .2s; 
+}
+
+a{
+    padding: 10px;
+    color: white
+}
+
+a:hover{
+    color: rgb(170, 15, 93);
+    cursor: pointer ;
+}
+
+mat-icon:hover{
+    transform: scale(1.5)
+}
+
+
+mat-drawer{
+
+    margin: 0px;
+    width: 250px; 
+    border-width: none;
+    background-color: rgb(11, 61, 77);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+   
+}
+
+mat-drawer-container{
+    height: calc(100vh - 50px);
+}
+mat-drawer-content{
+    background-color:
+    rgb(228, 230, 231);
+}
+
+.content{
+    height: calc(100vh - 98px);
+   
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+
+
+}
+
+.content h2{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.icons{
+    
+   margin-top: 40%;
+}
+
+.avatar {
+    height: 120px;
+
+}
+
+mat-tab-group{
+   border: rgb(75, 74, 74);
+   font-size: medium;
+   font-weight: 300;
+   width: 50%;
+   background-color: rgb(223, 164, 164);
+   height: 55%;
+   border-radius: 10px;
+   text-decoration-color: black;
+  margin-left: 25%;
+   position: center;
+   
+   
+   
+}
+
+
+
+
+input{
+    width: 90%;
+    padding: 10px;
+   
+}
+
+.container{
+    padding: 30px;
+    margin-left: 30px;
+    margin-top: 0px;
+
+}
+
+
+button{
+    margin-top: 30px;
+}
+button:hover{
+    transform: scale(1.2)
+}
+
+h2{
+    top: 0%;
+}
+
+.user-information{
+    border: solid;
+    color: black;
+    height: 60px;
+    width: 50%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+
+}
+
+a{
+   left: 80px;
+   
+}
+
+label{
+    color: black;
+}
+
+mat-tab{
+    color: black;
+}
+
+.image-card{
+    margin-left: 80%;
+}

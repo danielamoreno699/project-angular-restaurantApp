@@ -1,0 +1,52 @@
+<body>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-md-5 off-md-3">
+            <div class="LogIn">
+<form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+    <h1>Log In</h1>
+<div class="form-group">
+    <div class="mb-3">
+  <label for="email">Email address</label>
+ <input type="email" formControlName = "email"  class="form-control" id="exampleInputEmail1"  placeholder="Enter email" [ngClass]="{ 'is-invalid': submitted && userFormControls['email'].errors}">
+ <div *ngIf="submitted && userFormControls['email'].errors" class="invalid-feedback">
+  <div *ngIf="userFormControls['email'].errors['required']">email is required</div>
+<div *ngIf="userFormControls['email'].errors['email']">Please enter valid email</div>  
+</div>
+</div>
+</div>
+
+<div class="form-group">
+    <div class="mb-3">
+  <label for="Password">Password</label>
+  <input type="password" formControlName = "password" class="form-control" id="Password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && userFormControls['password'].errors}">
+  <div *ngIf="submitted && userFormControls['password'].errors" class="invalid-feedback">
+    <div *ngIf="userFormControls['password'].errors['required']">password is required</div>
+  </div>
+</div>
+</div>
+
+<button type="submit" class="btn btn-primary">Log In</button>
+
+<h4 routerLink="/user-password-reset">Forgot password?</h4>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+

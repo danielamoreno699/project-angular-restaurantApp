@@ -1,0 +1,97 @@
+
+
+
+<body>
+
+<div class="container ">
+    <div class="row">
+        <div class="col-md-5 off-md-3">
+            <div class="registration">
+               
+<form [formGroup]="userForm"  (ngSubmit)="onSubmit()">
+    <h1>registration</h1>
+     <!--<div *ngIf="isLoggedIn ? userloggedIn : userloggedOut"></div>-->
+    
+    <div class="form-group">
+
+        <div class="mb-3">
+        <label for="Fname">first name</label>
+        <input formControlName="fname" class="form-control" id="Fname" placeholder="Enter first name"  [ngClass]="{'is-invalid' : isUserFormSubmitted && userFormControls['fname'].errors}">
+        <div *ngIf="isUserFormSubmitted && userFormControls['fname'].errors" class="invalid-feedback"> 
+          <div *ngIf="userFormControls['fname'].errors['required']"> first name is required</div>
+
+      </div>
+    </div>
+
+      <div class="form-group">
+
+        <div class="mb-3">
+        <label for="Lname">last name</label>
+        <input formControlName="lname" class="form-control" id="text" placeholder="Enter last name"  [ngClass]="{'is-invalid' : isUserFormSubmitted && userFormControls['lname'].errors}">
+        <div *ngIf="isUserFormSubmitted && userFormControls['lname'].errors" class="invalid-feedback"> 
+          <div *ngIf="userFormControls['lname'].errors['required']"> last name is required</div>
+
+    </div>
+      </div>
+
+    <div class="form-group">
+        <div class="mb-3">
+      <label for="exampleInputEmail1">Email address</label>
+      <input formControlName="email" class="form-control" id="exampleInputEmail1"  placeholder="Enter email" [ngClass]="{ 'is-invalid': isUserFormSubmitted && userFormControls['email'].errors}">
+      <div *ngIf="isUserFormSubmitted && userFormControls['email'].errors" class="invalid-feedback">
+        <div *ngIf="userFormControls['email'].errors['required']">email is required</div>
+    <div *ngIf="userFormControls['email'].errors['email']">Please enter valid email</div>  
+      </div>
+    </div>
+    </div>
+
+    <div class="form-group">
+        <div class="mb-3">
+      <label for="password">Password</label>
+      <input formControlName="password" class="form-control" id="Password" placeholder="Password" [ngClass]="{ 'is-invalid': isUserFormSubmitted && userFormControls['password'].errors}" >
+      <div *ngIf="isUserFormSubmitted && userFormControls['password'].errors" class="invalid-feedback">
+        <div *ngIf="userFormControls['password'].errors['required']">password is required</div>
+        <div *ngIf="userFormControls['password'].errors['minlenght']">Please enter 5 characters</div>
+        <div *ngIf="userFormControls['password'].errors['maxlength']">Please dont enter more than 10 characters</div>
+      </div>
+    </div>
+</div>
+
+    <div class="form-group">
+        <div class="mb-3">
+        <label for="cpassword">Confirm Password</label>
+        <input formControlName="cpassword" class="form-control" id="ConfPassword" placeholder="Confirm Password" [ngClass]="{ 'is-invalid': isUserFormSubmitted && userFormControls['cpassword'].errors}" >
+        <div *ngIf="isUserFormSubmitted && userFormControls['cpassword'].errors" class="invalid-feedback">
+          <div *ngIf="userFormControls['cpassword'].errors['required']">cpassword is required</div>
+          <div *ngIf="userFormControls['cpassword'].errors['minlenght']">Please enter 5 characters</div>
+        <div *ngIf="userFormControls['cpassword'].errors['maxlength']">Please dont enter more than 10 characters</div>
+          <div *ngIf="userFormControls['cpassword'].errors['mustMatch']">Password should match</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <input formControlName ="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">accept terms of use & privacy</label>
+    </div>
+
+    
+    <button [disabled]="loading" type="submit" class="btn btn-primary">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      register now</button>
+    <button type="button" class="btn btn-warning"  (click)="reset()">Reset</button>
+
+    </div>
+    </div>
+   
+  </form>
+
+
+</div>
+</div>
+</div>
+</div>
+
+<h4  routerLink="/login-user">Already have an account? LOGIN</h4>
+
+</body>

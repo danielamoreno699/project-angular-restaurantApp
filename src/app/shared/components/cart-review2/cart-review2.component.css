@@ -1,0 +1,23 @@
+.card {
+    width:400px;
+    border-radius: 20px;
+    border:solid;
+    color: rgb(240, 229, 229);
+    background-color: rgb(102, 97, 98);
+    margin-top: -7%;
+    margin-left: 58%;
+    position: static;
+
+}
+
+p{
+    margin-left: 7%;
+    display: inline-flex;
+}
+mat-divider{
+    color: black;
+}
+
+button:hover{
+    color: red;
+}

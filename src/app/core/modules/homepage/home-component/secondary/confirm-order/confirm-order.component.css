@@ -1,0 +1,41 @@
+
+
+
+a{
+   color: white;
+   padding: 10px;
+   
+}
+
+a:hover{
+   color: rgb(170, 15, 93);
+   cursor: pointer ;
+
+}
+
+.mat-icon{
+   transition: transform .2s; 
+}
+
+mat-icon:hover{
+   transform: scale(1.5)
+}
+
+#logOut{
+   transition: transform .2s; 
+}
+
+#logOut:hover{
+   transform: scale(1.5)
+}
+
+.important-btn{
+   margin-left: 59%;
+   margin-top: 3% ;
+   border-radius: 20px;
+  
+}
+
+.btn-success{
+   margin-left: 2%;
+}

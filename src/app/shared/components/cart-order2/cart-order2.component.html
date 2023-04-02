@@ -1,0 +1,58 @@
+
+
+
+<div class=" container ">
+
+    <div  class="text">
+        <h1 style="text-align: center; ">your orders</h1>
+      </div>
+    <table class="table table-hover">
+        
+        <thead>
+          <tr>
+            
+            <th scope="col">item</th>
+            <th scope="col">dish</th>
+            <th scope="col">item price</th>
+            <th scope="col">QTY</th>
+           
+            <th scope="col">total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of Menu; let i = index ">
+       
+
+            <td>   {{i}}   </td>
+       
+            <td > {{item.dishName}}</td>
+
+            <td> {{item.count }} </td>
+
+            <td> {{item.cost }} </td>
+
+            <td> {{item.cost * item.count}} </td>
+
+            <td> <button type="button" class="btn btn-primary"  (click)=" removeData(this.item)">remove</button> </td>
+          </tr>
+
+          <tr>  
+         
+
+        </tr>
+          
+          
+       
+        </tbody>
+    
+      </table>
+      </div>
+
+
+    
+     
+     
+    
+          
+        
+    

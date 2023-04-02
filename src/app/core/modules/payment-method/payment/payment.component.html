@@ -1,0 +1,106 @@
+<mat-toolbar color= "black" class="navbar">
+
+    <a routerLink="/confirm-order"    routerLinkActive="active" id=" confirm">Back</a>
+  
+   
+</mat-toolbar>
+
+
+<form class="container sm-3 d-flex justify-content-center main"  [formGroup]="myForm" (ngSubmit)="onSubmit()"  >
+
+   
+    <div class="card">
+        <h4 class="card-header"  style="color:black">Enter your card details</h4>
+        <p class="px-sm-3"  style="color:black">YOUR TOTAL ORDER IS : </p> 
+
+
+      
+        <div class=" d-flex justify-content-between px-sm-3 pt-4">
+            <div class="card-body">
+
+            <div class="form-group">
+                <div class=" px-3 pt-3">
+                    <label for="name credicard"  class = "name-credicard">name</label>
+                    <input formControlName="namePayment" class="form-control"  [ngClass]="{'is-invalid' : submitted && userFormControls['namePayment'].errors}">
+                </div>
+                <div *ngIf="submitted && userFormControls['namePayment'].errors" class="invalid-feedback"> 
+                    <div *ngIf="userFormControls['namePayment'].errors['required']"> name holder is required</div>
+          
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class=" px-3 pt-3">
+                    <label for="card" >card</label>
+                    <input formControlName="creditCard" class="form-control" name="creditCard"  aria-describedby="name-credicard" placeholder="8828 2456 7654 9999" [ngClass]="{'is-invalid' : submitted && userFormControls['creditCard'].errors}">
+                </div>
+                <div *ngIf="submitted && userFormControls['creditCard'].errors" class="invalid-feedback"> 
+
+
+  
+
+                    <div *ngIf="userFormControls['creditCard'].errors['required']">  number of holder is required</div>
+                    <div *ngIf="userFormControls['creditCard'].errors['minlenght']">Please enter correct  characters</div>
+                    <div *ngIf="userFormControls['creditCard'].errors['maxlength']">Please  enter correct characters</div>
+
+
+                </div>
+            </div>
+
+               
+               
+                    <div class =" form-group d-flex justify-content-between">
+                       <div class=" d-flex justify-content-between px-sm-1 pt-5">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Month and Year</mat-label>
+                                <input matInput [matDatepicker]="dp" [formControl]="date">
+                                <mat-hint>MM/YYYY</mat-hint>
+                                <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                                <mat-datepicker #dp
+                                startView="multi-year"
+                                (monthSelected)="setMonthAndYear($event, dp)"
+                                panelClass="month-picker">
+                            </mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    
+
+                             
+            <div class="form-group"> 
+                    <div class=" d-flex justify-content-between px-sm-1x pt-5">
+                        <label for="CVV" ></label>
+                        <input formControlName="cvv" class="form-control" name="cvv"  placeholder="333" [ngClass]="{'is-invalid' : submitted && userFormControls['cvv'].errors}">
+                    </div>
+
+                    <div *ngIf="submitted && userFormControls['cvv'].errors" class="invalid-feedback"> 
+                        <div *ngIf="userFormControls['cvv'].errors['required']"> number of holder is required</div>
+                        <div *ngIf="userFormControls['cvv'].errors['minlenght']">Please enter correct  characters</div>
+                        <div *ngIf="userFormControls['cvv'].errors['maxlength']">Please  enter correct characters</div>
+    
+                        
+                    </div>
+                    </div >
+            </div>
+
+                    <div class="card-buttons" style="margin-left: 4%;">
+                   
+                    <button  type="button" class="btn btn-success" (click)="onSubmit()">payment </button>
+                               
+                    <button type="button" class="btn btn-warning" style="margin-left: 2px;">reset</button>
+                </div>
+
+                <img  class="image-card " src="https://icons-for-free.com/iconfiles/png/512/card+credit+card+debit+card+master+card+icon-1320184902079563557.png" style="width: 80px ; left: 20%;">
+                        
+                    </div>
+                    
+                    </div>
+
+
+                </div>
+                
+
+
+
+</form>

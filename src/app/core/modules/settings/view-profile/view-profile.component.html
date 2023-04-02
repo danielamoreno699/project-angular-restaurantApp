@@ -1,0 +1,148 @@
+<mat-toolbar color= "black" class="navbar">
+
+    <a  routerLink="/home-component" routerLinkActive="active" id=" home">AppRestaurant</a>
+    
+    <div >
+
+        <a routerLink="confirm-order"  routerLinkActive="active"><mat-icon> local_grocery_store</mat-icon> </a>
+        <a routerLink="/place-order"    routerLinkActive="active"><mat-icon> local_shipping</mat-icon></a>
+        <a routerLink="/user-profile"   routerLinkActive="active"><mat-icon> person_pin</mat-icon></a>
+        <a routerLink="/login-user"    routerLinkActive="active" id = "logOut"  >logOut</a>
+
+      </div>
+</mat-toolbar>
+
+
+
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <img  class = "avatar mat-elevation-z8"  src="https://as2.ftcdn.net/v2/jpg/03/31/69/91/1000_F_331699188_lRpvqxO5QRtwOM05gR50ImaaJgBx68vi.jpg">
+         <h4 class=" name ">user name</h4>
+        <div class=" icons">
+    
+            <button mat-button class="menu-button">
+                <mat-icon>person</mat-icon>
+                <span> profile details</span>
+            </button>
+            <mat-divider></mat-divider>
+
+                <button mat-button class="menu-button">
+                    <mat-icon>payment</mat-icon>
+                    <span> payment details</span>
+
+
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-button class="menu-button">
+                    <mat-icon>room</mat-icon>
+                    <span> address</span>
+
+
+                </button>
+
+                
+                    <mat-divider></mat-divider>
+                
+                    <button mat-button class="menu-button">
+                        <mat-icon>home</mat-icon>
+                        <span> home</span>
+    
+    
+                    </button>
+
+
+                    <mat-divider></mat-divider>
+                
+            </div>
+    </mat-drawer>
+
+
+    <mat-drawer-content>
+
+        <div class = "user-information">
+            <h2>User information</h2>
+            <button type="button" class="btn btn-success"  (click)="GoBack()">Go Back </button>
+
+      
+            
+    </div>
+<mat-tab-group animationDuration="0ms" >
+    <mat-tab label="profile" >    
+        <form class=" container"   >
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="name"  class = "name">name</label>
+
+              <!--- <p>  {{f.value.names.fname}}  </p>--->
+
+              </div>
+            </div> 
+            <div class="form-group">
+                <div class="mb-3">
+                <label for="last-name">last name</label>
+                <p>{{name}} </p>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="mb-3">
+              <label for="exampleInputEmail1">Email address</label>
+              <p> {{profileView.email}}</p>
+            </div>
+            </div>
+            
+          </form>
+    </mat-tab>
+    <mat-tab label="Address">
+        <form class=" container"  *ngFor="let item of profileView | keyvalue">
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="House"  class = "house">House No</label>
+                <p> {{ item.key }}: {{ item.value }} </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="City"  class = "city">City</label>
+                <p> </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <div class="mb-3">
+                <label for="state"  class = "state">state</label>
+                <p>  </p>
+            </div>
+            </div>
+            <div class="form-group"> 
+                <label for="landmark"  class = "landmark">landmark</label>
+                <p>  </p>
+            </div>
+            
+        </form>
+    </mat-tab>
+
+
+
+    <mat-tab label="payment information">
+                     
+ 
+ 
+    </mat-tab>
+
+
+  </mat-tab-group>          
+
+
+
+
+
+</mat-drawer-content>
+
+
+  </mat-drawer-container>
+
+
+
+  
+

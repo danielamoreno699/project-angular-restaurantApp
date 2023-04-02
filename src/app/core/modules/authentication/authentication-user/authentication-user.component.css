@@ -1,0 +1,49 @@
+body{
+ background-color: rgb(180, 185, 185);
+    
+
+}
+
+.container{
+   margin-left: 30%;
+  
+    
+
+}
+
+form{
+    border: solid;
+    padding: 10%;
+    left: 70%;
+    background-color: rgb(6, 33, 44);
+    margin-top: 20%;
+   
+}
+
+label{
+    color: #f0f8ff;
+}
+
+h1{
+    color: #f0f8ff;
+    margin-left: 35%;
+}
+
+button{
+    margin-top: 20px;
+}
+
+button:hover{
+    transform: scale(1.2)
+}
+
+h4{
+    text-align: center;
+    font-weight:bolder;
+    margin-left: 0%;
+    margin-right: 7%;
+}
+
+h4:hover{
+    transform: scale(1.2)
+}

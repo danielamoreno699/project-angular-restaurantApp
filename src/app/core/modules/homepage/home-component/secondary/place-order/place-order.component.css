@@ -1,0 +1,82 @@
+body{
+ 
+}
+
+
+#datatable-search-input{
+    margin-top: 100px ;
+    width: 900px;
+    margin-left: 400px;
+    
+}
+
+.btn-success{
+    margin-left: 72%;
+    margin-top: 0px;
+}
+
+.container{
+    margin-top: 0%;
+    border: solid;
+    border-radius: 10px;
+    width: 1500px;
+    height: 350px;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid brown;
+    
+  }
+
+.order-1{
+    margin-top: 20px;
+}
+
+h4{
+    margin-left: 20px;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+img{
+    margin-left: 18%;
+}
+
+
+.navbar {
+   
+
+
+}
+
+a{
+    color: white;
+    padding: 10px;
+    
+}
+
+a:hover{
+    color: rgb(170, 15, 93);
+    cursor: pointer ;
+ 
+}
+
+.mat-icon{
+    transition: transform .2s; 
+}
+
+mat-icon:hover{
+    transform: scale(1.5)
+}
+
+#logOut{
+    transition: transform .2s; 
+}
+
+#logOut:hover{
+    transform: scale(1.5)
+}
+  

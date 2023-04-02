@@ -1,0 +1,50 @@
+.navbar {
+    justify-content: space-between;}
+
+mat-icon{
+    transition:transform .2s; 
+}
+
+a{
+    padding: 10px;
+    color: white
+}
+
+a:hover{
+    color : green;
+    cursor: pointer;
+
+}
+
+mat-icon:hover{
+    transform: scale(1.5)
+}
+
+
+
+form{
+    max-width: 30%;
+    margin-top: 5%;
+}
+
+form .card h4{
+      
+}
+
+button{
+    margin-left: 60%;
+    margin-top: 10%;
+}
+
+.month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+.month-picker .mat-calendar-arrow {
+    display: none;
+  }
+
+  .mat-calendar-period-button{
+      display: contents;
+  }
+ 

@@ -1,0 +1,41 @@
+
+.container{
+    border: solid;
+    border-color: darkgrey;
+    border-radius: 10px;
+   margin-top: 5%;
+    width: 800px;
+    margin-left: 120px;
+}
+
+
+button{
+    margin-left: 50%;
+}
+
+text{
+    background-color: gray}
+
+
+    mat-card {
+        width:15px;
+        border-radius: 20px;
+        border:solid;
+        color: rgb(240, 229, 229);
+        background-color: rgb(102, 97, 98);
+        margin-top: 6%;
+        margin-right: 70%;
+    
+    }
+    
+    p{
+        margin-left: 1%;
+        display: inline-flex;
+    }
+    mat-divider{
+        color: black;
+    }
+    
+    button:hover{
+        color: red;
+    }
